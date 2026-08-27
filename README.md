@@ -42,3 +42,12 @@ practical-4
 Summary = This C++ program calculates the factorial of a non-negative integer using two different approaches: iterative and recursive. It accepts user input, validates that the number is non-negative, and computes the factorial using both methods. The program also measures and compares the execution time of each approach using the chrono library with nanosecond precision. The iterative method uses a loop and requires constant extra memory, while the recursive method repeatedly calls itself until the base case is reached,consuming additional memory due to the function call stack.
 
 Conclusion = The program demonstrates that both iterative and recursive methods produce the same factorial result for a valid input. However, the iterative approach is generally more efficient because it uses O(1) space and avoids the overhead of recursive function calls. The recursive approach is simpler and easier to understand conceptually but requires O(n) space due to recursion. Overall, this program effectively compares the performance and memory usage of both techniques while illustrating the concepts of algorithm complexity and execution time measurement.
+
+practical-7
+Summary
+
+The given Python program solves the Making Change Problem using Dynamic Programming. It takes the number of coin denominations, the coin values, and the target amount as input. It creates a DP array where dp[i] represents the minimum number of coins needed to make the amount i. The base case is dp[0] = 0, since zero coins are needed to make amount 0. The program then checks each coin for every amount and stores the minimum number of coins required. Finally, it displays the minimum number of coins, the complete DP table, and the time and space complexities.
+
+Conclusion
+
+The Dynamic Programming approach provides an efficient solution to the Making Change Problem by avoiding repeated calculations and storing previously computed results. If the target amount can be formed using the given denominations, the program returns the minimum number of coins required; otherwise, it reports that change cannot be made. The algorithm has a time complexity of O(amount × number of coins) and a space complexity of O(amount), making it suitable for solving the problem efficiently for moderate-sized amounts.
