@@ -109,3 +109,14 @@ The program displays:
 - Execution time
 - Time complexity
 - Space complexity
+
+practical-6
+
+Summary
+Matrix Chain Multiplication (MCM) is a Dynamic Programming problem used to find the minimum number of scalar multiplications needed to multiply a sequence of matrices.
+The goal is not to multiply the matrices, but to find the best order (parenthesization) for multiplication.
+
+
+Conclusion:
+Matrix Chain Multiplication is an efficient Dynamic Programming technique used to determine the best order for multiplying a sequence of matrices. It reduces the total number of scalar multiplications by dividing the problem into smaller subproblems and storing their results.
+
