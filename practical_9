@@ -1,0 +1,82 @@
+
+#include <iostream>
+#include <vector>
+#include <queue>
+using namespace std;
+
+void prims(int V, vector<pair<int, int>> adj[]) {
+    priority_queue<
+        pair<int, int>,
+        vector<pair<int, int>>,
+        greater<pair<int, int>>
+    > pq;
+
+    vector<bool> visited(V, false);
+
+    // {weight, vertex}
+    pq.push({0, 0});
+
+    int mstWeight = 0;
+
+    while (!pq.empty()) {
+        int weight = pq.top().first;
+        int node = pq.top().second;
+        pq.pop();
+
+        if (visited[node])
+            continue;
+
+        visited[node] = true;
+        mstWeight += weight;
+
+        cout << "Selected vertex: " << node
+             << " Weight: " << weight << endl;
+
+        for (auto edge : adj[node]) {
+            int adjNode = edge.first;
+            int edgeWeight = edge.second;
+
+            if (!visited[adjNode]) {
+                pq.push({edgeWeight, adjNode});
+            }
+        }
+    }
+
+    cout << "Minimum Spanning Tree Weight: "
+         << mstWeight << endl;
+}
+
+int main() {
+    int V = 5;
+
+    vector<pair<int, int>> adj[V];
+
+    // Undirected graph
+    adj[0].push_back({1, 2});
+    adj[1].push_back({0, 2});
+
+    adj[0].push_back({3, 6});
+    adj[3].push_back({0, 6});
+
+    adj[1].push_back({2, 3});
+    adj[2].push_back({1, 3});
+
+    adj[1].push_back({3, 8});
+    adj[3].push_back({1, 8});
+
+    adj[1].push_back({4, 5});
+    adj[4].push_back({1, 5});
+
+    adj[2].push_back({4, 7});
+    adj[4].push_back({2, 7});
+
+    prims(V, adj);
+
+    return 0;
+}
+Selected vertex: 0 Weight: 0
+Selected vertex: 1 Weight: 2
+Selected vertex: 2 Weight: 3
+Selected vertex: 4 Weight: 5
+Selected vertex: 3 Weight: 6
+Minimum Spanning Tree Weight: 16
