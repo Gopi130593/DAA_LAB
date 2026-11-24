@@ -218,3 +218,83 @@ BFS        | O(V + E)           | O(V)
    - **BFS** expands uniformly outwards level-by-level, guaranteeing the shortest path in unweighted graphs.
 2. **Efficiency**:
    - Both DFS and BFS achieve linear time complexity $\mathcal{O}(V + E)$ relative to graph size, making them optimal search methods for arbitrary graph topologies.
+
+practical-9
+
+Prim's Algorithm – Minimum Spanning Tree
+📌 About the Project
+
+This project implements Prim's Algorithm using C++. Prim's Algorithm is a greedy algorithm used to find the Minimum Spanning Tree (MST) of a connected, undirected, weighted graph.
+
+The algorithm selects edges with minimum weights while ensuring that no cycles are formed.
+
+🚀 Features
+Implements Prim's Algorithm using C++.
+Uses an adjacency list to represent the graph.
+Uses a priority queue to efficiently find the minimum-weight edge.
+Calculates the total weight of the Minimum Spanning Tree.
+Displays the selected vertices and their corresponding edge weights.
+🛠️ Technologies Used
+C++
+STL (Standard Template Library)
+Priority Queue
+Graph Data Structure
+⚙️ How to Run
+1. Clone the Repository
+bash
+git clone <your-repository-url>
+
+2. Navigate to the Project Directory
+bash
+cd prims-algorithm
+
+3. Compile the Program
+bash
+g++ main.cpp -o prims
+
+4. Run the Program
+bash
+./prims
+
+
+For Windows:
+
+bash
+prims.exe
+
+📊 Sample Output
+text
+Selected vertex: 0 Weight: 0
+Selected vertex: 1 Weight: 2
+Selected vertex: 2 Weight: 3
+Selected vertex: 4 Weight: 5
+Selected vertex: 3 Weight: 6
+
+Minimum Spanning Tree Weight: 16
+
+⏱️ Time and Space Complexity
+Time Complexity: O(E log E)
+Space Complexity: O(V + E)
+
+Where:
+
+V = Number of vertices
+E = Number of edges
+📖 Algorithm Steps
+Start from any vertex.
+Mark the selected vertex as visited.
+Find the minimum-weight edge connecting a visited vertex to an unvisited vertex.
+Add the edge to the Minimum Spanning Tree.
+Repeat until all vertices are visited.
+🎯 Applications
+Network design
+Road and railway planning
+Electrical wiring networks
+Computer network optimization
+👨‍💻 Author
+
+Your Name
+
+📄 License
+
+This project is open-source and available for educational purposes.
